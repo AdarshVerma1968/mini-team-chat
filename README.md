@@ -63,3 +63,66 @@ This project is fully deployable on **Render** (backend) and **Render / Vercel /
 - dotenv  
 
 ---
+## Folder Structure
+mini-team-chat/
+├─ backend/
+│  ├─ package.json
+│  ├─ .env.example
+│  ├─ index.js
+│  ├─ socket.js
+│  ├─ config/
+│  │  └─ db.js
+│  ├─ models/
+│  │  ├─ User.js
+│  │  ├─ Channel.js
+│  │  └─ Message.js
+│  ├─ routes/
+│  │  ├─ auth.js
+│  │  ├─ channels.js
+│  │  └─ messages.js
+│  └─ middleware/
+│     └─ auth.js
+└─ frontend/
+   ├─ package.json
+   ├─ index.html
+   └─ src/
+      ├─ main.jsx
+      ├─ App.jsx
+      ├─ api.js
+      ├─ socket.js
+      ├─ pages/
+      │  ├─ Login.jsx
+      │  ├─ Signup.jsx
+      │  ├─ Channels.jsx
+      │  └─ ChannelView.jsx
+      └─ styles.css
+## 🛠️ Setup & Run Instructions
+
+Follow these steps to run the project locally.
+
+---
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/your-username/mini-team-chat.git
+cd mini-team-chat
+Backend Setup-
+cd backend
+npm install
+.env-
+PORT=4000
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+CLIENT_URL=http://localhost:5173
+
+npm run dev
+
+Frontend Setup-
+cd frontend
+npm install
+.env-
+VITE_API_URL=http://localhost:4000/api
+VITE_SOCKET_URL=http://localhost:4000
+
+npm run dev
