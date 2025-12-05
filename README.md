@@ -51,7 +51,7 @@ This project is fully deployable on **Render** (backend) and **Render / Vercel /
 - Context API  
 - Axios  
 - Socket.IO Client  
-- CSS Modules / Tailwind (optional)
+- CSS Modules
 
 ### **Backend**
 - Node.js  
